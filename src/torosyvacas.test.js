@@ -37,4 +37,9 @@ describe("-----TORO----",() =>{
     const torosyvaca = new TorosYVacas("124");
     expect(torosyvaca.siEsToro("125")).toEqual("!!");
   });
+  it("Comparamos mas de dos digitos por cada coincidencia con digito y posiciion es '!' ", () => {
+    const torosyvaca = new TorosYVacas("1234");
+    expect(torosyvaca.siEsToro("1235")).toEqual("!!!");
+  });
 });
+
