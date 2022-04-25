@@ -10,16 +10,20 @@ describe("Toros y Vacas -> ganar", () => {
     const torosyvaca = new TorosYVacas("7");
     expect(torosyvaca.adivinar("2")).toEqual("");
   });
-  it("Si ingresamos como codigo 12 y nuestro intento es 2 deberia retornar '*' para determinar si es vaca", () => {
-    const torosyvaca = new TorosYVacas("12");
-    expect(torosyvaca.adivinar("24")).toEqual("*");
-  });
-  it("Si ingresamos como codigo 12 y nuestro intento es 21 deberia retornar '**'", () => {
-    const torosyvaca = new TorosYVacas("12");
-    expect(torosyvaca.adivinar("21")).toEqual("**");
-  });
-  it("Si ingresamos como codigo 124 y nuestro intento es 421 deberia retornar '*'", () => {
-    const torosyvacas = new TorosYVacas("124");
-    expect(torosyvacas.adivinar("421")).toEqual("***");
-  });
 });  
+
+
+describe("-----VACA----",() =>{
+    it("Si ingresamos como codigo 12 y nuestro intento es 2 deberia retornar '*' para determinar si es vaca", () => {
+        const torosyvaca = new TorosYVacas("12");
+        expect(torosyvaca.adivinar("24")).toEqual("*");
+      });
+      it("Si ingresamos como codigo 12 y nuestro intento es 21 deberia retornar '**'", () => {
+        const torosyvaca = new TorosYVacas("12");
+        expect(torosyvaca.adivinar("21")).toEqual("**");
+      });
+      it("Si ingresamos como codigo 124 y nuestro intento es 421 deberia retornar '*'", () => {
+        const torosyvacas = new TorosYVacas("124");
+        expect(torosyvacas.adivinar("421")).toEqual("***");
+      });
+});
