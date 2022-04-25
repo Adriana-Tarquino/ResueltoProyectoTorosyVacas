@@ -12,6 +12,10 @@ describe("Toros y Vacas -> ganar", () => {
     const torosyvacas = new TorosYVacas("12");
     expect(torosyvacas.adivinar("24")).toEqual("*");
   });
+  it("Si ingresamos como codigo 12 y nuestro intento es 21 deberia retornar '**'", () => {
+    const torosyvacas = new TorosYVacas("12");
+    expect(torosyvacas.adivinar("21")).toEqual("**");
+  });
 });  
 
 class TorosYVacas {
@@ -19,14 +23,15 @@ class TorosYVacas {
     this.codigoSecreto = codigoSecreto;
     }
     adivinar(intento){
-        if(intento == this.codigoSecreto){
+        let resp = "";
+        if(intento === this.codigoSecreto){
             return "Ganaste!";
         }
-        else{
-            if(this.codigoSecreto.includes(intento[0])){
-                return "*";
+        for(var i=0; i < this.codigoSecreto; i++){
+            if(this.codigoSecreto.includes(intento[i])){
+                resp += "*";
             }
-            return "";
         }
+        return resp;
     }
 }
