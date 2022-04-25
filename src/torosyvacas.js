@@ -8,11 +8,16 @@ class TorosYVacas {
             return "Ganaste!";
         }
         for(var i=0; i < this.codigoSecreto; i++){
-            if(this.codigoSecreto.includes(intento[i])){
+            if(this.codigoSecreto.includes(intento.at(i))){
                 resp += "*";
             }
         }
         return resp;
+    }
+    siEsToro(intento){
+        if(this.codigoSecreto.includes(intento.at(0))){
+            return "!";
+        }
     }
 }
 

@@ -27,3 +27,10 @@ describe("-----VACA----",() =>{
         expect(torosyvacas.adivinar("421")).toEqual("***");
       });
 });
+
+describe("-----TORO----",() =>{
+  it("Si ingresamos un digito que coincide con la poiscion y el digito este deberia devolver TORO '!' ", () => {
+    const torosyvaca = new TorosYVacas("12");
+    expect(torosyvaca.siEsToro("15")).toEqual("!");
+  });
+});
