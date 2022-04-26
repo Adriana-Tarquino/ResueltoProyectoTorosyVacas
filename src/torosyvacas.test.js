@@ -51,6 +51,10 @@ describe("-----TERNERA----",() =>{
     const torosyvaca = new TorosYVacas("1");
     expect(torosyvaca.siEsTernera("2")).toEqual("#");
   });
+  it("Comprobamos si es ternera, cuando dos digitos estan entre +1 o -1", () => {
+    const torosyvaca = new TorosYVacas("15");
+    expect(torosyvaca.siEsTernera("27")).toEqual("#");
+  });
 });
 
 

@@ -1,0 +1,17 @@
+Como Jugador 
+Quiero saber si el intento es ternera
+Para ver mas pistas sobre como adivinar el codigo secreto
+CRITERIOS DE CONFIRMACIÓN:
+   Valida si es ternera cuando un digito se acerrca en menos 1 y 1
+
+
+COMO
+    Segundo jugador.
+QUIERO
+    Saber si el código ingresado es vaca y/o Toro 
+PARA
+    Tener  una pista más detallada adivinando si me acerco al código secreto.
+
+CRITERIOS DE CONFIRMACIÓN:
+    Válida si es toro y/o vaca.
+
