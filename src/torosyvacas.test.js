@@ -15,15 +15,15 @@ describe("Toros y Vacas -> ganar", () => {
 describe("-----VACA----",() =>{
     it("Si ingresamos como codigo 12 y nuestro intento es 2 deberia retornar '*' para determinar si es vaca", () => {
         const torosyvaca = new TorosYVacas("12");
-        expect(torosyvaca.adivinar("24")).toEqual("*");
+        expect(torosyvaca.siEsVaca("24")).toEqual("*");
       });
       it("Si ingresamos como codigo 12 y nuestro intento es 21 deberia retornar '**'", () => {
         const torosyvaca = new TorosYVacas("12");
-        expect(torosyvaca.adivinar("21")).toEqual("**");
+        expect(torosyvaca.siEsVaca("21")).toEqual("**");
       });
       it("Si ingresamos como codigo 124 y nuestro intento es 421 deberia retornar '*'", () => {
         const torosyvacas = new TorosYVacas("124");
-        expect(torosyvacas.adivinar("111")).toEqual("*");
+        expect(torosyvacas.siEsVaca("111")).toEqual("*");
       });
 });
 
@@ -60,6 +60,7 @@ describe("-----TERNERA----",() =>{
     expect(torosyvaca.siEsTernera("24")).toEqual("##");
   });
 });
+
 
 
 

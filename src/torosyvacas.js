@@ -3,35 +3,49 @@ class TorosYVacas {
     this.codigoSecreto = codigoSecreto;
     }
     adivinar(intento){
-        let esVaca = "";
+        let total = "";
         if(intento === this.codigoSecreto){
             return "Ganaste!";
         }
-        esVaca =  this.siEsVaca(intento);
-        return esVaca;
+        return total;
     }
+    verificarSiEsVaca(intento, i){
+        var vaca;
+        vaca =  intento.includes(this.codigoSecreto.at(i));
+        return vaca;
+    }    
     siEsVaca(intento){
         let resp = "";
         for(var i=0; i < this.codigoSecreto; i++){
-            if(intento.includes(this.codigoSecreto.at(i))){
+            if(this.verificarSiEsVaca(intento, i)){
                 resp += "*";
             }
         }
         return resp;
     }
+    verificarSiEsToro(intento, i){
+        var toro;
+        toro =  intento.includes(this.codigoSecreto.at(i),i);
+        return toro;
+    }
     siEsToro(intento){
         let cadena = "";
         for(var i = 0; i < intento; i ++){
-            if(intento.includes(this.codigoSecreto.at(i),i)){
+            if(this.verificarSiEsToro(intento, i)){
                 cadena += "!";
             }
         }
         return cadena;
     }
+    verificarSiEsTernera(intento,i){
+        var ternera;
+        ternera =  this.codigoSecreto.includes(Number(intento.at(i)) + 1) || this.codigoSecreto.includes(Number(intento.at(i)) - 1);
+        return ternera;
+    }
     siEsTernera(intento){
         let cadena = "";
         for(var i = 0;i < intento.length; i++){
-            if(this.codigoSecreto.includes(Number(intento[i]) + 1) || this.codigoSecreto.includes(Number(intento[i]) - 1)){
+            if(this.verificarSiEsTernera(intento,i)){
                 cadena += "#";
             }
         }
