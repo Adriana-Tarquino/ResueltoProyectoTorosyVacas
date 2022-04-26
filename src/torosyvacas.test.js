@@ -60,6 +60,12 @@ describe("-----TERNERA----",() =>{
     expect(torosyvaca.siEsTernera("24")).toEqual("##");
   });
 });
+describe("-----Juego----",() =>{
+  it("Comnbinar entre ternera, vaca, toro", () => {
+    const torosyvaca = new TorosYVacas("1234");
+    expect(torosyvaca.adivinar("1235")).toEqual("!!!***####");
+  });
+});
 
 
 
