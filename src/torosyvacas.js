@@ -3,10 +3,15 @@ class TorosYVacas {
     this.codigoSecreto = codigoSecreto;
     }
     adivinar(intento){
-        let resp = "";
+        let esVaca = "";
         if(intento === this.codigoSecreto){
             return "Ganaste!";
         }
+        esVaca =  this.siEsVaca(intento);
+        return esVaca;
+    }
+    siEsVaca(intento){
+        let resp = "";
         for(var i=0; i < this.codigoSecreto; i++){
             if(intento.includes(this.codigoSecreto.at(i))){
                 resp += "*";

@@ -12,7 +12,6 @@ describe("Toros y Vacas -> ganar", () => {
   });
 });  
 
-
 describe("-----VACA----",() =>{
     it("Si ingresamos como codigo 12 y nuestro intento es 2 deberia retornar '*' para determinar si es vaca", () => {
         const torosyvaca = new TorosYVacas("12");
@@ -42,4 +41,5 @@ describe("-----TORO----",() =>{
     expect(torosyvaca.siEsToro("1235")).toEqual("!!!");
   });
 });
+
 
