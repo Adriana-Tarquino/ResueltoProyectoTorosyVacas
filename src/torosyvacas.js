@@ -32,6 +32,9 @@ class TorosYVacas {
         if(intento.at(0) < this.codigoSecreto.at(0)){
             return "#";
         }
+        if(intento.at(0) > this.codigoSecreto.at(0)){
+            return "#";
+        }
     }
 }
 
