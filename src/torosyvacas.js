@@ -28,6 +28,11 @@ class TorosYVacas {
         }
         return cadena;
     }
+    siEsTernera(intento){
+        if(intento.at(0) < this.codigoSecreto.at(0)){
+            return "#";
+        }
+    }
 }
 
 export default TorosYVacas;

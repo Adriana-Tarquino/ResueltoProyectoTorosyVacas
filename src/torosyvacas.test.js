@@ -42,4 +42,12 @@ describe("-----TORO----",() =>{
   });
 });
 
+describe("-----TERNERA----",() =>{
+  it("Comprobamos si es ternera cuando el primer digito esta entre -1", () => {
+    const torosyvaca = new TorosYVacas("1");
+    expect(torosyvaca.siEsTernera("0")).toEqual("#");
+  });
+});
+
+
 
