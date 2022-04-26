@@ -29,10 +29,13 @@ class TorosYVacas {
         return cadena;
     }
     siEsTernera(intento){
-        if(this.codigoSecreto.includes(Number(intento[0]) + 1) || 
-            this.codigoSecreto.includes(Number(intento[0]) - 1)){
-                return  "#";
+        let cadena = "";
+        for(var i = 0;i < intento.length; i++){
+            if(this.codigoSecreto.includes(Number(intento[i]) + 1) || this.codigoSecreto.includes(Number(intento[i]) - 1)){
+                cadena += "#";
             }
+        }
+        return cadena;
     }
 }
 
